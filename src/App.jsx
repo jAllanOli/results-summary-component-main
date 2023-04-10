@@ -1,9 +1,15 @@
 import React from "react";
 import Category from "./components/Category";
 import Data from "./data.json";
+import ReactionIcon from "./assets/images/icon-reaction.svg";
+import MemoryIcon from "./assets/images/icon-memory.svg";
+import VerbalIcon from "./assets/images/icon-verbal.svg";
+import VisualIcon from "./assets/images/icon-visual.svg";
 import "./sass/style.scss";
 
 function App() {
+  const icons = [ReactionIcon, MemoryIcon, VerbalIcon, VisualIcon];
+
   return (
     <main>
       <div className="ResultsContainer">
@@ -21,7 +27,7 @@ function App() {
         <h2 className="Summary__tittle">Summary</h2>
 
         <ul className="Summary__list">
-          {Data.map((item) => (
+          {Data.map((item, index) => (
             <li>
               <Category
                 key={item.category}
@@ -30,7 +36,7 @@ function App() {
                 bgColor={item.color}
                 textColor={item.textColor}
               >
-                <img src={item.icon} />
+                <img src={icons[index]} />
               </Category>
             </li>
           ))}
