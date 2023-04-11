@@ -1,13 +1,13 @@
-function Category({ tittle, score, bgColor, textColor, key, children }) {
+function Category({ tittle, score, bgColor, textColor, children }) {
   return (
-    <div className="Category" key={key} style={{ background: bgColor }}>
-      <div className="Category__tittle">
+    <div className="category" style={{ background: bgColor }}>
+      <div className="category__title">
         {children}
-        <p className="Category__text" style={{ color: textColor }}>
+        <p className="category__text" style={{ color: textColor }}>
           {tittle}
         </p>
       </div>
-      <p className="Category__score">{score} / 100</p>
+      <p className="category__score">{score} / 100</p>
     </div>
   );
 }

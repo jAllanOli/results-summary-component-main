@@ -12,37 +12,36 @@ function App() {
 
   return (
     <main>
-      <div className="ResultsContainer">
-        <h2 className="ResultsContainer__tittle">Your Result</h2>
-        <div className="ResultsContainer__finalScore">
+      <div className="results-container">
+        <h2 className="results-container__title">Your Result</h2>
+        <div className="results-container__final-score">
           <span>76</span> of 100
         </div>
-        <h1 className="ResultsContainer__ratio">Great</h1>
-        <p className="ResultsContainer__text">
+        <h1 className="results-container__ratio">Great</h1>
+        <p className="results-container__text">
           You scored higher than 65% of the people who have taken these tests.
         </p>
       </div>
 
-      <div className="Summary">
-        <h2 className="Summary__tittle">Summary</h2>
+      <div className="summary">
+        <h2 className="summary__title">Summary</h2>
 
-        <ul className="Summary__list">
+        <ul className="summary__list">
           {Data.map((item, index) => (
-            <li>
+            <li key={item.category}>
               <Category
-                key={item.category}
                 tittle={item.category}
                 score={item.score}
                 bgColor={item.color}
                 textColor={item.textColor}
               >
-                <img src={icons[index]} />
+                <img src={icons[index]} alt="icon" />
               </Category>
             </li>
           ))}
         </ul>
 
-        <button className="Summary__button">Continue</button>
+        <button className="summary__button">Continue</button>
       </div>
     </main>
   );
