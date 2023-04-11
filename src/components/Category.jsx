@@ -7,7 +7,10 @@ function Category({ tittle, score, bgColor, textColor, children }) {
           {tittle}
         </p>
       </div>
-      <p className="category__score">{score} / 100</p>
+      <p className="category__score">
+        {score}
+        <span> / 100</span>
+      </p>
     </div>
   );
 }

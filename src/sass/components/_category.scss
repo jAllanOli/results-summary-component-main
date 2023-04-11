@@ -1,0 +1,22 @@
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  border-radius: 12px;
+
+  &__title {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  &__score {
+    font-weight: 700;
+    color: #303b59;
+
+    & span {
+      opacity: 50%;
+    }
+  }
+}
