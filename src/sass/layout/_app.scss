@@ -13,9 +13,13 @@ html {
   }
 }
 
-.root {
-  min-height: 100vh;
+body {
+  height: 100vh;
   background-color: #ecf2ff;
+}
+
+.root {
+  height: 100%;
 
   @media (min-width: 720px) {
     display: flex;
